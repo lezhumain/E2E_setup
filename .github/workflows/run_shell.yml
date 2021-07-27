@@ -29,6 +29,10 @@ jobs:
         run: |
           echo "Add other actions to build,"
           echo "test, and deploy your project."
+          
+          echo "${GITHUB_WORKSPACE}"
+          pwd
+          
           # make file runnable, might not be necessary
           chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
 
