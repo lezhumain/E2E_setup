@@ -3,11 +3,11 @@
 # Install MacOS E2E environment
 brew update
 brew install jq
-brew install curl
-brew install docker
-brew install node
-brew install azure-cli
-brew install carthage
+#brew install curl
+#brew install docker
+#brew install node
+#brew install azure-cli
+#brew install carthage
 
 # install openjdk11
 brew install openjdk@11
@@ -27,21 +27,21 @@ echo 'export JAVA_HOME="$(/usr/libexec/java_home -v 11)"' >> ~/.zshrc
 brew install maven
 
 # add temp keys
-PUBKEY=""
-PRIVKEY=""
-SSH_FILE="./id_key"
+#PUBKEY=""
+#PRIVKEY=""
+#SSH_FILE="./id_key"
 
-echo "$PRIVKEY" > "$SSH_FILE"
-echo "$PUBKEY" > "${SSH_FILE}.pub"
+#echo "$PRIVKEY" > "$SSH_FILE"
+#echo "$PUBKEY" > "${SSH_FILE}.pub"
 
 # launch SSH agent
-eval "$(ssh-agent -s)"
-ssh-add "$SSH_FILE"
+#eval "$(ssh-agent -s)"
+#ssh-add "$SSH_FILE"
 
 # clone API tests project
-git clone git@github.com:whitespace-software/APITestAutomation.git
-cd APITestAutomation
-git checkout dev
+#git clone git@github.com:whitespace-software/APITestAutomation.git
+#cd APITestAutomation
+#git checkout dev
 
 # run API tests
-mvn clean test declaration
+mvn clean test -Dcucumber.options="src/test/java/cucumber/features --tags @JNM_1"
