@@ -33,6 +33,9 @@ jobs:
           echo "${GITHUB_WORKSPACE}"
           pwd
           
+          ls -al ..
+          ls -al .
+          
           # make file runnable, might not be necessary
           chmod +x "${GITHUB_WORKSPACE}/.github/script.sh"
 
