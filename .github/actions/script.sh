@@ -3,11 +3,11 @@
 # Install MacOS E2E environment
 brew update
 brew install jq
-#brew install curl
-#brew install docker
-#brew install node
-#brew install azure-cli
-#brew install carthage
+brew install curl
+brew install docker
+brew install node
+brew install azure-cli
+brew install carthage
 
 # install openjdk11
 brew install openjdk@11
