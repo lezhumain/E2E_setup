@@ -44,4 +44,4 @@ brew install maven
 #git checkout dev
 
 # run API tests
-mvn clean test -Dcucumber.options="src/test/java/cucumber/features --tags @JNM_1"
+mvn clean test
